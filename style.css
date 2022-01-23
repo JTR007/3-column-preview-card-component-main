@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+}
+
+:root {
+    /* ### Primary */
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* ### Neutral */
+
+    --transparent-white /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+
+}
+
+body {
+ 
+    font-family: 'Big Shoulders Display', cursive, 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    position: relative;
+
+}
+
+.container {
+
+    position: absolute;
+    top: 260px;
+    left: 260px;
+    width: 60%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    color: var(--transparent-white);
+
+}
+
+.container article {
+    padding: 30px;
+}
+
+.container h2 {
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+
+.container p {
+    line-height: 24px;
+    margin-bottom: 60px;
+    font-weight: 400;
+}
+
+.container .tarjeta_1 {
+    background-color: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.container .tarjeta_2 {
+    background-color: var(--dark-cyan);
+}
+
+.container .tarjeta_3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 240px 0 20px rgba(211, 207, 207, 0.5);
+}
+
+button {
+    border-radius: 30px;
+    border: none;
+    padding: 10px 25px;
+    background-color: var(--very-light-gray);
+}
+
+.tarjeta_1 button {
+    color: var(--bright-orange);
+}
+
+.tarjeta_2 button {
+    color: var(--dark-cyan);
+}
+
+.tarjeta_3 button {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width:375px){
+
+    .container {
+        top: 60px;
+        left: 20px;
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .container .tarjeta_1 {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .container .tarjeta_3 {
+        border-radius: 0 0 10px 10px;
+        box-shadow: none;
+    }
+
+}
